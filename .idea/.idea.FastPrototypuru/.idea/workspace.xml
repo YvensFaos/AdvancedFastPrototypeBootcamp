@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69a141db-1c6e-4272-a6d5-a1ff63dbd3ff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FastPrototypuru/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FastPrototypuru/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerNavigation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerNavigation.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

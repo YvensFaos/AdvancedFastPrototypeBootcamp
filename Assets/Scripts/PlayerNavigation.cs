@@ -2,6 +2,7 @@ using System.Collections;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class PlayerNavigation : MonoBehaviour
@@ -20,6 +21,8 @@ public class PlayerNavigation : MonoBehaviour
     private LayerMask interestMask;
     [SerializeField] 
     private LayerMask terrainMask;
+    [SerializeField] 
+    private UnityEvent pickupEvent;
 
     private int _score;
     private Vector3 _nextPosition = Vector3.zero;
@@ -52,6 +55,8 @@ public class PlayerNavigation : MonoBehaviour
                 {
                     _nextPosition = next.transform.position;
                 }
+
+                var res = found.ToList().Select(o => o.transform.position);
             }
             else
             {
@@ -84,6 +89,7 @@ public class PlayerNavigation : MonoBehaviour
         Destroy(other.gameObject);
         ++_score;
         gameObject.name = $"Player A [{_score}]";
+        pickupEvent.Invoke();
     }
 
     private void OnDrawGizmos()
