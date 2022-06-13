@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,7 +24,7 @@ public class FruitSpawner : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(timer);
-            var randomPoint = RandomPointWithinArea();
+            var randomPoint = RandomHelper.RandomPointWithinArea(area);
 
             var randomPointOffset = randomPoint;
             randomPointOffset.y += offset;
@@ -36,17 +35,6 @@ public class FruitSpawner : MonoBehaviour
                     hit.point, Quaternion.identity);
             }
         }
-    }
-
-    private Vector3 RandomPointWithinArea()
-    {
-        var areaBounds = area.bounds;
-        var areaBoundsMin = areaBounds.min;
-        var areaBoundsMax = areaBounds.max;
-        return new Vector3(
-            Random.Range(areaBoundsMin.x, areaBoundsMax.x), 
-        Random.Range(areaBoundsMin.y, areaBoundsMax.y), 
-        Random.Range(areaBoundsMin.z, areaBoundsMax.z));
     }
 
     private void OnDrawGizmos()

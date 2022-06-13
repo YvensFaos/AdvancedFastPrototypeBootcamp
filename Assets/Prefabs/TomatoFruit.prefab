@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7942766023271149790}
   - component: {fileID: 7942766023270150686}
   - component: {fileID: 1769551965928955332}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TomatoFruit
   m_TagString: Fruit
   m_Icon: {fileID: 0}
@@ -95,5 +95,5 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.3457393
+  m_Radius: 0.5
   m_Center: {x: 0.003800854, y: -0.007592827, z: -0.00056390464}
