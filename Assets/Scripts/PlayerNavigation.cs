@@ -18,7 +18,7 @@ public class PlayerNavigation : MonoBehaviour
     {
         if (moveTowards != null)
         {
-            _navMeshAgent.destination = moveTowards.position;    
+            _navMeshAgent.destination = moveTowards.position;
         }
     }
 }

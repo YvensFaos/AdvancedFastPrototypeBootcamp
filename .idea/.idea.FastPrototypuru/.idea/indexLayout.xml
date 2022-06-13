@@ -70,6 +70,7 @@
       <Path>../../../Library/Unity/cache/packages/packages.unity.com/com.unity.services.core@1.0.1</Path>
     </explicitIncludes>
     <explicitExcludes>
+      <Path>.git</Path>
       <Path>.idea</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
