@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -46,7 +47,11 @@ public class PlayerNavigation : MonoBehaviour
                 fieldOfViewRadius, interestMask);
             if (found.Length > 0)
             {
-                _nextPosition = found[0].transform.position;
+                var next = found.OrderBy(o => (o.transform.position - selfTransform.position).sqrMagnitude).First();
+                if (next != null)
+                {
+                    _nextPosition = next.transform.position;
+                }
             }
             else
             {
