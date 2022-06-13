@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class FruitSpawner : MonoBehaviour
 {
@@ -45,5 +47,10 @@ public class FruitSpawner : MonoBehaviour
             Random.Range(areaBoundsMin.x, areaBoundsMax.x), 
         Random.Range(areaBoundsMin.y, areaBoundsMax.y), 
         Random.Range(areaBoundsMin.z, areaBoundsMax.z));
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube(area.center, area.size);
     }
 }
