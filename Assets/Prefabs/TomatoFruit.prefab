@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7942766023271149790}
   - component: {fileID: 7942766023270150686}
   - component: {fileID: 1769551965928955332}
+  - component: {fileID: 3733987494889127384}
   m_Layer: 6
   m_Name: TomatoFruit
   m_TagString: Fruit
@@ -97,3 +98,16 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0.003800854, y: -0.007592827, z: -0.00056390464}
+--- !u!114 &3733987494889127384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7942766023272148190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6a0a230f28d242f4ace0bda557229c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fruitScore: 1
